@@ -4,7 +4,7 @@
   "description": "Large File Processor",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node --max-old-space-size=4096 index.js"
   },
   "author": "Zishan Parwez",
   "license": "ISC",

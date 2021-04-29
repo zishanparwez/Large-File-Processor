@@ -4,14 +4,17 @@ const { success, error } = require("consola");
 const { DB, PORT } = require("./api/config");
 const app = express();
 
-app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 
 app.get('/', (req, res) => {
-  res.render('home', {title: 'Large File Proessor'});
+  success({
+    message: `Welcome to Large File Processor`,
+    badge: true,
+  });
+  res.send({message: "Welcome to Large File Processor", status: 200});
 });
 
 
