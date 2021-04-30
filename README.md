@@ -55,7 +55,7 @@ module.exports = mongoose.model('Products', productSchema);
     - Aggregating table by `no. of products` based on rows with same `name`
 
 ---
-## API Routes
+## API END-POINTS
 
 Server runs on PORT: 8080
     - API Link: `localhost/8080`
