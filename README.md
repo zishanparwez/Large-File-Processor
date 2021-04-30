@@ -58,11 +58,11 @@ module.exports = mongoose.model('Products', productSchema);
 ## API Routes
 
 Server runs on PORT: 8080
-  - API Link: `localhost/8080`
+    - API Link: `localhost/8080`
 Following are the API Links for performing different task in Large File Prcessor system
 1. Import `products.csv` file to into `products` collection of MongoDB
-  - API Link: `localhot/8080/api/products/import`
-  - METHOD: **GET**
+    - API Link: `localhot/8080/api/products/import`
+    - METHOD: **GET**
   ```javascript
     const importCSV = async (req, res) => {
       try {
@@ -97,8 +97,8 @@ Following are the API Links for performing different task in Large File Prcessor
   }
   ```
 2. Get all the products from the database
-  - API Link: `localhot/8080/api/products/fetchdata`
-  - METHOD: **GET**
+    - API Link: `localhot/8080/api/products/fetchdata`
+    - METHOD: **GET**
   ```javascript
   const getProducts = async (req, res) => {
     try {
@@ -118,8 +118,8 @@ Following are the API Links for performing different task in Large File Prcessor
   }
   ```
 3. Update a product by `sku` field as primary key
-  - API Link: `localhot/8080/api/products/:sku/update`
-  - METHOD: **PUT**
+    - API Link: `localhot/8080/api/products/:sku/update`
+    - METHOD: **PUT**
   ```javascript
   const updateProduct = async (req, res) => {
     try {
@@ -142,8 +142,8 @@ Following are the API Links for performing different task in Large File Prcessor
   }
   ```
 4. Aggregate products by `no. of products` based on rows with same `name`
-  - API Link: `localhot/8080/api/products/aggregate`
-  - METHOD: **GET**
+    - API Link: `localhot/8080/api/products/aggregate`
+    - METHOD: **GET**
   ```javascript
   const aggregateProducts = async (req, res) => {
     try {
@@ -164,9 +164,9 @@ Following are the API Links for performing different task in Large File Prcessor
       }
   }
   ```
-5. Get produt by id
-  - API Link: `localhot/8080/api/products/:id`
-  - METHOD: **GET**
+5. Get product by id
+    - API Link: `localhot/8080/api/products/:id`
+    - METHOD: **GET**
   ```javascript
   const getProduct = async (req, res) => {
     try {
