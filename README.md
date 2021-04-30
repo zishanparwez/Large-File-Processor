@@ -5,14 +5,14 @@ Aim is to build a system which is able to handle long running processes in a dis
 ---
 ## Steps to run Large File Processor
 
-1. docker build -t large-file-processor .
-2. docker run -it -p 8080:3000 -d large-file-processor
+  1. docker build -t large-file-processor .
+  2. docker run -it -p 8080:3000 -d large-file-processor
 
 ---
 ## Product Schema
-- name
-- sku (Primary Key)
-- desription
+  - name
+  - sku (Primary Key)
+  - desription
 
 ```javascript
 const productSchema = new Schema({
@@ -24,25 +24,35 @@ const productSchema = new Schema({
   description: { type: String, required: 'Product description cannot be left blank.' }
 });
 
+module.exports = mongoose.model('Products', productSchema);
+
 ```
 ---
 ## Points to achieve
 
 1. OOPs:
-  - Used separate files for routes, models, controllers and coupled code together satisfying OOPs concept.
+    - Used separate files for routes, models, controllers and coupled code together satisfying OOPs concept.
+
+
 2. Regular non-blocking parallel ingestion of the given file into a table:
-  - Used NodeJS as it provides non-blocking I/O operation in asynchronous manner.
-  - Create a MongoDB database
-  - Generate an application, to import CSV file using NodeJS
-  - Install Mongoose module to connect and process data using mongoose application
-  - Install Fast-CSV module to import CSV file using NodeJS into MongoDB collection
+    - Used NodeJS as it provides non-blocking I/O operation in asynchronous manner.
+    - Create a MongoDB database
+    - Generate an application, to import CSV file using NodeJS
+    - Install `Mongoose` module to connect and process data using mongoose application
+    - Install `Fast-CSV` module to import CSV file using NodeJS into MongoDB collection
+
+
 3. Updating existing products in the Products table based on `sku` as the primary key:
-  - Made `sku` as primary key for the `product` schema
-  - Find the product by `sku` field and update it
+    - Made `sku` as primary key for the `product` schema
+    - Find the product by `sku` field and update it
+
+
 4. All product details are to be ingested into a single table
-  - Importing `products.csv` file to a single table named as `products`
+    - Importing `products.csv` file to a single table named as `products`
+
+
 5. An aggregated table on above rows with `name` and `no. of products` as the columns
-  - Aggregating table by `no. of products` based on rows with same `name`
+    - Aggregating table by `no. of products` based on rows with same `name`
 
 ---
 ## API Routes
