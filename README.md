@@ -32,7 +32,7 @@ module.exports = mongoose.model('Products', productSchema);
 
 ```
 ---
-## Points to achieve
+## Points achieved
 
 1. OOPs:
     - Used separate files for routes, models, controllers and coupled code together satisfying OOPs concept.
@@ -124,6 +124,10 @@ module.exports = mongoose.model('Products', productSchema);
 |10|Lauren Smith|grow-we-decide-job|Smile yet fear society theory help. Rather thing language skill since ...|
 
 ---
+
+## What would you improve if given more days
+  - I can use a view engine to show the details in browser mode.
+  - I can take the file path irrespective of putting file in the project
   
 
   
