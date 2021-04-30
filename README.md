@@ -5,8 +5,8 @@ Aim is to build a system which is able to handle long running processes in a dis
 ---
 ## Steps to run Large File Processor
 
-  1. docker build -t large-file-processor .
-  2. docker run -it -p 8080:3000 -d large-file-processor
+  1. `docker build -t large-file-processor .`
+  2. `docker run -it -p 8080:3000 -d large-file-processor`
 
 ---
 ## Product Schema
