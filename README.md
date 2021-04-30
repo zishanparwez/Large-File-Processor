@@ -5,7 +5,7 @@ Aim is to build a system which is able to handle long running processes in a dis
 ---
 ## Steps to run Large File Processor
 
-  1. Intall Docker on your system, ignore if it is already installed
+  1. Install Docker on your system, ignore if it is already installed
   2. Clone the Project in any diretory on your local machine
   3. Open terminal and go to the directory where project is cloned
   4. Run below commands to build and run the project
