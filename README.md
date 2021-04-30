@@ -5,8 +5,12 @@ Aim is to build a system which is able to handle long running processes in a dis
 ---
 ## Steps to run Large File Processor
 
-  1. `docker build -t large-file-processor .`
-  2. `docker run -it -p 8080:3000 -d large-file-processor`
+  1. Intall Docker on your system, ignore if it is already installed
+  2. Clone the Project in any diretory on your local machine
+  3. Open terminal and go to the directory where project is cloned
+  4. Run below commands to build and run the project
+      - `docker build -t large-file-processor .`
+      - `docker run -it -p 8080:3000 -d large-file-processor`
 
 ---
 ## Product Schema
