@@ -75,6 +75,29 @@ module.exports = mongoose.model('Products', productSchema);
 4. Aggregate products by `no. of products` based on rows with same `name`
     - API Link: `localhot/8080/api/products/aggregate`
     - METHOD: **GET**
+    ```javascript
+    {
+    "success": "Products aggregated",
+    "status": 200,
+    "data": [
+        {
+            "_id": "Kevin Brennan",
+            "total": 1
+        },
+        {
+            "_id": "Angela Thompson",
+            "total": 1
+        },
+        {
+            "_id": "Sarah Edwards",
+            "total": 1
+        },
+        .
+        .
+        .
+        ]
+    }
+    ```
   
 5. Get product by id
     - API Link: `localhot/8080/api/products/:id`
